@@ -1,0 +1,246 @@
+*{
+  box-sizing: border-box;
+  /*1rem is equal to 12px*/
+}
+
+/*Nav*/
+.logo{
+  width: 100px; /*can change logo size later*/
+  cursor: pointer;
+  padding: 10px; /*prevents weird gap between nav and nav links in mobile version*/
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  gap: 250px; /*space between logo and burger*/
+  padding: 20px 0px;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #FFF3E8;
+  font-family: ofelia-text,sans-serif;
+}
+.nav-links{
+  display: flex;
+  /*justify-content used with width changes the spacing of the nav items. can change later*/
+  justify-content: space-around;
+  width: 35%;
+  padding-left: 0;
+  z-index: 1; /*ensures that the nav is top layer among other layers*/
+}
+.nav-links a:hover{
+  font-weight: 500;
+}
+.nav-links li{ /*to remove the bullet points from the list*/
+  list-style: none;
+}
+.nav-links a{
+  color: #473D33;
+  text-decoration: none;
+}
+
+/*responsive nav*/
+.burger div{
+  width: 55px;
+  height: 2px;
+  background-color: #473D33;
+  margin: 10px;
+  transition: all .20s ease; /*this is where the transition goes instead of in .toggle*/
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px){ /*this changes what the mobile design looks like*/
+  body{
+    overflow-x: hidden; /*prevents horizontal scrolling from setting transform property*/
+  }
+  .nav-links{
+    background: #FFF3E8;
+    position: absolute; /*maybe try other positioning?*/
+    height: 100vh;
+    top: 10vh; /*gap between top of nav and menu*/
+    width: 100%; /*changes how much space the nav takes up on the screen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; /*correcting the original space-around justification*/
+    padding-top: 125px; /*makes the ul list slightly more centered vertically*/
+    gap: 70px;
+
+    transform: translateX(100%); /*this moves the nav off the screen*/
+    transition: transform 0.5s ease-in; /*the transition for the nav sliding in*/
+  }
+  .nav-links a{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3rem;
+  }
+  .nav-links li{
+    opacity: 0; /*must leave this here so you can't see the links before they animate*/
+  }
+  .burger{
+    display: block; /*adds the burger menu in for mobile screen sizes*/
+  }
+  .nav-active{ /*this class must be inside the media query. made mistake of taking it out*/
+    transform: translateX(0%); /*When the nav is active, it no longer lives to the side of the viewport*/
+    height: 120vh; /*need to change this number once other sections are finalized*/
+  }
+  .hide{ /*hiding content while still leaving screen reader accessible. got from css-tricks.com*/
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+ }
+
+ /*making animation for nav-links to use in home.js*/
+@keyframes navLinkFadeIn{
+  from{
+    opacity: 0; /*nav items will fade in from 0% opacity to 100% opacity*/
+    transform: translateX(50px); /*nav items will also move down slightly*/
+    /*these two properties create a fade down effect*/
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+}
+
+/*making animations stop when page is resized*/
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/*making the burger menu toggle to an X*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-1px, 17px); /*might have to come back to this translate number*/
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(1px, -17px);
+}
+
+/*main*/
+main{
+  background-color: #FFF3E8;
+}
+h2{
+  margin: 0;
+  font-family: ofelia-text,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.67rem;
+  color: #473D33;
+  margin: 0;
+  margin-bottom: 40px;
+}
+fieldset{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  font-family: ofelia-text,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #473D33;
+}
+#name, #email, #message{
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid #6FA7B3;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 5px 5px 0px 0px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  width: 350px;
+  padding: 20px;
+  font-family: ofelia-text,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  color: #473D33;
+}
+#message{
+  resize: none;
+  height: 300px;
+}
+#submit{
+  background-color: #6FA7B3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: ofelia-text,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+}
+#submit:hover{
+  cursor: pointer;
+  background-color: #437C88;
+}
+#main-container{
+  display: flex;
+  justify-content: center;
+}
+#form-section{
+  padding: 3rem;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#name-email-container{
+  display: flex;
+  flex-direction: column;
+}
+/*main media query*/
+@media(min-width: 992px){
+#name-email-container{
+  flex-direction: row;
+  gap: 32px;
+}
+#message{
+  height: 175px;
+  width: 730px;
+}
+#form-section{
+  padding-bottom: 8rem; /*To fill up the white space gap at the bottom*/
+}
+}
+
+/*Footer*/
+footer{
+  background-color: #FFF3E8;
+  padding: 3rem;
+
+  /*to center*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer-graphic{
+  max-width: 100px;
+}
+#footer-text{
+  text-align: center;
+  color: #473D33;
+}
+#footer-text-title{
+  font-family: ofelia-text,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  margin: 10px;
+}
+#copyright{
+  font-family: ofelia-text,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+}

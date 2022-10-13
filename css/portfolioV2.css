@@ -1,0 +1,347 @@
+*{
+  box-sizing: border-box;
+  /*1rem is equal to 12px*/
+}
+
+/*Nav*/
+.logo{
+  width: 100px; /*can change logo size later*/
+  cursor: pointer;
+  padding: 10px; /*prevents weird gap between nav and nav links in mobile version*/
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  gap: 250px; /*space between logo and burger*/
+  padding: 20px 0px;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #FFF3E8;
+  font-family: ofelia-text,sans-serif;
+}
+.nav-links{
+  display: flex;
+  /*justify-content used with width changes the spacing of the nav items. can change later*/
+  justify-content: space-around;
+  width: 35%;
+  padding-left: 0;
+  z-index: 1; /*ensures that the nav is top layer among other layers*/
+}
+.nav-links a:hover{
+  font-weight: 500;
+}
+.nav-links li{ /*to remove the bullet points from the list*/
+  list-style: none;
+}
+.nav-links a{
+  color: #473D33;
+  text-decoration: none;
+}
+
+/*responsive nav*/
+.burger div{
+  width: 55px;
+  height: 2px;
+  background-color: #473D33;
+  margin: 10px;
+  transition: all .20s ease; /*this is where the transition goes instead of in .toggle*/
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px){ /*this changes what the mobile design looks like*/
+  body{
+    overflow-x: hidden; /*prevents horizontal scrolling from setting transform property*/
+  }
+  .nav-links{
+    background: #FFF3E8;
+    position: absolute; /*maybe try other positioning?*/
+    height: 100vh;
+    top: 10vh; /*gap between top of nav and menu*/
+    width: 100%; /*changes how much space the nav takes up on the screen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; /*correcting the original space-around justification*/
+    padding-top: 125px; /*makes the ul list slightly more centered vertically*/
+    gap: 70px;
+
+    transform: translateX(100%); /*this moves the nav off the screen*/
+    transition: transform 0.5s ease-in; /*the transition for the nav sliding in*/
+  }
+  .nav-links a{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3rem;
+  }
+  .nav-links li{
+    opacity: 0; /*must leave this here so you can't see the links before they animate*/
+  }
+  .burger{
+    display: block; /*adds the burger menu in for mobile screen sizes*/
+  }
+  .nav-active{ /*this class must be inside the media query. made mistake of taking it out*/
+    transform: translateX(0%); /*When the nav is active, it no longer lives to the side of the viewport*/
+    height: 120vh; /*need to change this number once other sections are finalized*/
+  }
+  .hide{ /*hiding content while still leaving screen reader accessible. got from css-tricks.com*/
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+ }
+
+ /*making animation for nav-links to use in home.js*/
+@keyframes navLinkFadeIn{
+  from{
+    opacity: 0; /*nav items will fade in from 0% opacity to 100% opacity*/
+    transform: translateX(50px); /*nav items will also move down slightly*/
+    /*these two properties create a fade down effect*/
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+}
+
+/*making animations stop when page is resized*/
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/*making the burger menu toggle to an X*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-1px, 17px); /*might have to come back to this translate number*/
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(1px, -17px);
+}
+
+/*Main background color*/
+main{
+  background-color: #FFF3E8;
+}
+
+/*Portfolio Section*/
+#portfolio-header h2{ /*the word portfolio*/
+  font-family: ofelia-text,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.67rem;
+  color: #473D33;
+  margin: 0;
+}
+#portfolio-header{
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0rem;
+}
+#filter-container{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
+  font-family: ofelia-text,sans-serif;
+  position: absolute; /*Positioned out of the document flow, but in relation to .dropdown*/
+  top: 80%; /*separates the word "filter" from the dropdown menu*/
+
+  /*Animation for the dropdown menu on mobile*/
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 150ms ease-in-out;
+}
+/*Dropdown animation applied to the #filter-container*/
+/*Had to add !important for it to work?*/
+.dropdown-menu-active{
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative; /*positioned relative to its normal position*/
+}
+#dropdown-button{
+  font-family: ofelia-text,sans-serif;
+  font-weight: 100; /*need to make thinner*/
+  font-style: normal;
+  color: #473D33;
+  font-size: 1.67rem;
+  margin-top: 18px; /*fixing typeface discrepancy*/
+  cursor: pointer;
+}
+.filter-element{
+  padding: 8px;
+  cursor: pointer;
+}
+.filter-element:hover{
+  font-weight: 500;
+}
+.filter-active{ /*gives the user feedback about the filter they selected*/
+  font-weight: 500;
+}
+.gallery-item.hide-image{
+  display: none;
+}
+.img-container{
+  height: 212px;
+  width: 400px;
+}
+#gallery-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-item{
+  padding-bottom: 50px;
+  border-bottom: 2px solid #473D33;
+  /*Need to make line cap rounded*/
+  margin-bottom: 50px;
+}
+.gallery-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+}
+.overlay h3{
+  font-family: ofelia-text,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.33rem;
+  color: #473D33;
+  margin: 0;
+  padding-top: 10px;
+  max-width: 400px;
+}
+
+
+/*Portfolio section media query*/
+@media(min-width: 768px){
+  .dropdown{
+    position: initial;
+  }
+  #filter-container{
+    position: initial;
+    opacity: 1; /*to ensure that the filters show up regardless of the event listener*/
+  }
+  #dropdown-button{
+    display: none;
+  }
+  #filter-container{
+    display: flex;
+    flex-direction: row;
+    background-color: inherit;
+    box-shadow: none;
+    padding: 0;
+  }
+  .filter-element{
+    padding: 16px;
+  }
+  .filter-element{
+    font-size: 1.67rem;
+  }
+  .filter-element:first-child{
+    padding-left: 0;
+  }
+  #portfolio-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15%;
+  }
+  #portfolio{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6rem;
+  }
+  #gallery-container{
+    display: inline-block;
+    width: 70%;
+    column-count: 3;
+    column-gap: 0.5rem;
+    /* margin: 0 auto; */
+  }
+  .gallery-item{
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+    padding: 0;
+    position: relative; /*This stops clumping of the titles*/
+    border-radius: 5px;
+  }
+  .img-container{
+    height: initial;
+    width: initial;
+    background-color: black;
+    border-radius: 5px;
+  }
+  /*Overlay animation*/
+  .overlay h3{
+    color: white;
+    font-size: 1rem;
+  }
+  .overlay{ /*the text overlay*/
+    position: absolute;
+    top: 0px;
+    padding: 1rem;
+    opacity: 0;
+  }
+  /*preview item animation on hover*/
+  .gallery-item:hover .overlay{
+    opacity: 1;
+    transition: .5s ease;
+  }
+  .gallery-item:hover .gallery-image{
+    opacity: 20%;
+    transition: .5s ease;
+  }
+}
+/*Another portfolio media query*/
+@media(min-width: 1100px){
+  .overlay h3{
+    font-size: 2rem;
+  }
+}
+
+/*Footer*/
+footer{
+  background-color: #FFF3E8;
+  padding: 3rem;
+
+  /*to center*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer-graphic{
+  max-width: 100px;
+}
+#footer-text{
+  text-align: center;
+  color: #473D33;
+}
+#footer-text-title{
+  font-family: ofelia-text,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  margin: 10px;
+}
+#copyright{
+  font-family: ofelia-text,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+}

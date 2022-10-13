@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Karli Vare - Home</title>
+  <meta name="description" content="">
+  <meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports ofelia font in regular and medium-->
+  <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports venn text-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<!--Accessibility Checklist:
+Makes sense without CSS?
+Semantic HTML?
+Label to form elements?
+Descrptive links
+alt for imgs
+show were :focus is, visibily highlighted
+Understandtable without color
+Things that look interactive are
+-->
+<body>
+  <nav>
+    <div class="logo">
+      <a href="home.html"><img src="./img/karlivare-logo.svg" alt="Karli Vare logo"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="portfolioV2.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger"> <!--For a collapsing mobile menu-->
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <main>
+    <section id="intro">
+      <div class="intro-text">
+        <h2 id="intro-title">Hi I'm Karli!</h2>
+        <p>I'm currently pursuing a digital media and design degree at the Univeristy of Connecticut. When I'm not designing, you can find me outdoors or cooking a tasty meal!</p>
+      </div>
+      <div class="intro-profile">
+        <img id="profile-img" src="./img/profile.svg" alt="Karli Vare profile picture">
+      </div>
+    </section>
+    <!--Add links to skills section that take you to the portfolio page with filter-->
+    <section id="skills">
+      <h3 id="skills-title">I have skills in...</h3>
+      <div id="skills-objects-container">
+        <div class="skills-object">
+          <img src="./img/embed-icon.svg" alt="embed icon">
+          <h4>Front end development</h4>
+        </div>
+        <div class="skills-object">
+          <img src="./img/flowchart-icon.svg" alt="flow chart icon">
+          <h4>UI/UX</h4>
+        </div>
+        <div class="skills-object">
+          <img src="./img/display-icon.svg" alt="display icon with paintbrush">
+          <h4>Graphic design</h4>
+        </div>
+      </div>
+    </section>
+    <section id="projects-text">
+      <h5>Check out some of my work below!</h5>
+      <a id="projects-link" href="portfolioV2.html"><h6>Or view all projects here</h6></a>
+    </section>
+    <section id="projects-preview">
+      <div class="preview-item">
+        <picture>
+          <source media="(min-width:465px)" srcset="./img/covidspread-mediumscreen.jpg">
+          <img class= "preview-img" src="./img/covidspread-square.jpg" alt="nutmeg publishing spreads preview">
+        </picture>
+        <div class="overlay"> <!--Created for the hover effect-->
+          <div class="preview-title">
+            <h5>Nutmeg Publishing Spreads</h5>
+            <h6>2021-2022</h6>
+          </div>
+        </div>
+      </div>
+      <div class="preview-item">
+        <img class= "preview-img" src="./img/recipegen-square.jpg" alt="recipe generator project preview">
+        <div class="overlay">
+          <div class="preview-title">
+            <h5>Recipe generator project</h5>
+            <h6>2022</h6>
+          </div>
+        </div>
+      </div>
+      <div class="preview-item">
+        <img class= "preview-img" src="./img/bfaposter-square.jpg" alt="BFA poster preview">
+        <div class="overlay">
+          <div class="preview-title">
+            <h5>UConn BFA Exhibition Poster</h5>
+            <h6>2021</h6>
+          </div>
+        </div>
+      </div>
+      <div class="preview-item">
+        <img class= "preview-img" src="./img/oceancollage-square.jpg" alt="ocean collage preview">
+        <div class="overlay">
+          <div class="preview-title">
+            <h5>Ocean Collage No.1</h5>
+            <h6>2020</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <img id="footer-graphic" src="./img/flower-triad.svg" alt="Blue flower triad graphic">
+    <div id="footer-text">
+      <h6 id="footer-text-title">Website designed and coded by Karli Vare</h6>
+      <small id="copyright">©Karli Vare 2022</small>
+    </div>
+  </footer>
+
+
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Karli Vare - Portfolio</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/portfolioV2.css">
+  <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports ofelia font in regular and medium-->
+  <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports venn text-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="home.html"><img src="./img/karlivare-logo.svg" alt="Karli Vare logo"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger"> <!--For a collapsing mobile menu-->
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <main>
+    <div id="main-container">
+      <section id="header-container">
+        <header id="portfolio-header">
+          <h2>Portfolio</h2>
+          <div class="dropdown">
+            <h4 id="dropdown-button">Filter</h4>
+            <div id="filter-container">
+            </div>
+          </div>
+        </header>
+      </section>
+      <section id="portfolio">
+        <div id="gallery-container">
+
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer id="footer">
+    <img id="footer-graphic" src="./img/flower-triad.svg" alt="Flower triad graphic">
+    <div id="footer-text">
+      <h6 id="footer-text-title">Website designed and coded by Karli Vare</h6>
+      <small id="copyright">©Karli Vare 2022</small>
+    </div>
+  </footer>
+
+  <script src="js/portfolio.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/data.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
