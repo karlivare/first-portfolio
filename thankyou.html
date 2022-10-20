@@ -18,7 +18,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/thankyou.css">
   <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports ofelia font in regular and medium-->
   <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports venn text-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -44,29 +44,11 @@
   </nav>
   <main>
     <div id="main-container">
-      <section id="form-section">
-        <h2>Contact Me</h2>
-        <div id="form-container">
-          <form action="https://formsubmit.co/kmvare@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Karli Vare Portfolio - New Message">
-            <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> -->
-            <div id="name-email-container">
-              <fieldset>
-                <label for="name">Name</label>
-                <input name="name" id="name" type="text" required>
-              </fieldset>
-              <fieldset>
-                <label for="email">Email</label>
-                <input name="email" type="email" id="email" required>
-              </fieldset>
-            </div>
-            <fieldset>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" maxlength="500" required></textarea>
-            </fieldset>
-            <button type="submit" id="submit">Submit</button>
-          </form>
-        </div>
+      <section id="submission-message">
+        <h2>Your message was submitted!</h2>
+        <p>I will get back to you as soon as possible. Thank you!</p>
+        <a id="another-response" href="contact.html">Submit Another Response</a>
+        <a id="back-home" href="home.html">Back to Home</a>
       </section>
     </div>
   </main>
