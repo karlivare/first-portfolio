@@ -51,8 +51,11 @@ nav{
   cursor: pointer;
 }
 @media screen and (max-width: 768px){ /*this changes what the mobile design looks like*/
-  body{
-    overflow-x: hidden; /*prevents horizontal scrolling from setting transform property*/
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
   }
   .nav-links{
     background: #FFF3E8;
@@ -91,6 +94,9 @@ nav{
     top: -9999px !important;
     left: -9999px !important;
  }
+ .body-position{
+  position: initial;
+  }
 
  /*making animation for nav-links to use in home.js*/
 @keyframes navLinkFadeIn{

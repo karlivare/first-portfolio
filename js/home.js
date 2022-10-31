@@ -40,13 +40,26 @@ const navSlide = () =>{ /*creating anonymous function*/
     //burger animation
     burger.classList.toggle('toggle'); //animates the burger menu lines
 
-    //disabling verticle scrolling when the nav is open so the rest of the page doesn't show
-    //needs to be on html and body for this to work
-    let html = document.querySelector('html');
+    //when navigation is open, hide the other elements and fix the horizontal scrolling
+    //need to set a timeout on main before it is hidden for a smoother looking transition
     let body = document.querySelector('body');
-    html.classList.toggle('disable-scrolling');
-    body.classList.toggle('disable-scrolling');
+    let main = document.querySelector('main');
+    
+    if(navOpen){
+      timeDelay = 0;
+    } else{
+      timeDelay = 500;
+    }
+    setTimeout(() => {
+      main.classList.toggle('hide')
+      body.classList.toggle('body-position')
+    }, `${timeDelay}`)
 
+    if(navOpen == false){
+      navOpen = true;
+    }else{
+      navOpen = false;
+    }
   })
 }
 navSlide();
