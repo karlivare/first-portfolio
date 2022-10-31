@@ -128,4 +128,16 @@ const images = [
     category: 'print',
     title: 'Nutmeg Experimental Spread (2022)',
   },
+  {
+    id: '19',
+    url: 'emailcampaign-mockup.jpg',
+    category: 'branding',
+    title: 'Ten Percent Happier Email Campaign (2022)'
+  },
+  {
+    id: '20',
+    url: 'typographical-exploration-1.jpg',
+    category: 'graphic',
+    title: 'Typographical Exploration No. 1 (2022)'
+  }
 ];
