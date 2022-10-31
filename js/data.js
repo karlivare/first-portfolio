@@ -78,6 +78,7 @@ const images = [
     url: 'recipegenerator.png',
     category: 'web',
     title: 'Random Recipe Generator (2020)',
+    href: 'https://github.uconn.edu/pages/kav19006/dmd3475-finalproject/home.html'
   },
   {
     id: '11',

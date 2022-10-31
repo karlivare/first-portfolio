@@ -14,17 +14,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     //add the filter-active class to the <span> that was actually clicked on
     e.target.classList.add('filter-active');
 
-    //loop through all the gallery images
-    // document.querySelectorAll('.gallery-image').forEach(element=>{
-    //   //if the id of the <span> (denoting the filter type) does not equal the category of the gallery image
-    //   //AND if the <span> filter is not set to "all"
-    //   if(e.target.id !== element.dataset.category & e.target.id !== "all"){
-    //     //hide the image
-    //     element.classList.add('hide-image');
-    //   } else{ //otherwise, show the image
-    //     element.classList.remove('hide-image');
-    //   }
-    // })
+    
     document.querySelectorAll('.gallery-item').forEach(element=>{
       if(e.target.id !== element.dataset.category & e.target.id !== "all"){
         element.classList.add('hide-image');
@@ -68,7 +58,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const domElement = document.createElement('img')
 
     let galleryItemHTML =
-    `<div class='gallery-item' data-category='${element.category}'><div class='img-container'><img alt='${element.title}' src='img/${element.url}' class='gallery-image'></div><div class='overlay'><h3>${element.title}</h3></div></div>`;
+    `<a href='${element.href}' target='_blank'><div class='gallery-item' data-category='${element.category}'><div class='img-container'><img alt='${element.title}' src='img/${element.url}' class='gallery-image'></div><div class='overlay'><h3>${element.title}</h3></div></div></a>`;
 
     galleryContainer.innerHTML+=galleryItemHTML;
   })

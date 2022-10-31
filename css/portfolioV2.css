@@ -2,6 +2,9 @@
   box-sizing: border-box;
   /*1rem is equal to 12px*/
 }
+a{
+  text-decoration: none;
+}
 
 /*Nav*/
 .logo{

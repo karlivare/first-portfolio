@@ -41,7 +41,7 @@ const navSlide = () =>{ /*creating anonymous function*/
     burger.classList.toggle('toggle'); //animates the burger menu lines
 
     //when navigation is open, hide the other elements and fix the horizontal scrolling
-    //need to set a timeout on main before it is hidden for a smoother looking transition
+    //implementing setTimeout makes the sliding transition appear smoother
     let body = document.querySelector('body');
     let main = document.querySelector('main');
     
