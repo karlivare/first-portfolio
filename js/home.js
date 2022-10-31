@@ -40,41 +40,14 @@ const navSlide = () =>{ /*creating anonymous function*/
     //burger animation
     burger.classList.toggle('toggle'); //animates the burger menu lines
 
-    //hide the rest of the homepage when nav is active. gives time for the footer to move down
-    if(navOpen){
-      timeDelay = 0;
-    } else{
-      timeDelay = 500;
-    }
-    setTimeout(() => {
-      //I should just make this hide main? One command vs a bunch.
-      sectionIntro.classList.toggle('hide');
-      sectionSkills.classList.toggle('hide');
-      sectionProjectsText.classList.toggle('hide');
-      sectionProjectsPreview.classList.toggle('hide');
-    }, `${timeDelay}`)
-    
-    //reset navOpen values so navLinks animation runs smoothly
-    if(navOpen == false){
-      navOpen = true;
-    }else{
-      navOpen = false;
-    }
+    //disabling verticle scrolling when the nav is open so the rest of the page doesn't show
+    //needs to be on html and body for this to work
+    let html = document.querySelector('html');
+    let body = document.querySelector('body');
+    html.classList.toggle('disable-scrolling');
+    body.classList.toggle('disable-scrolling');
+
   })
-
-  //when nav is not active, add the animation classes to the desired elements. without doing this, the animated element would "stick" to the mobile nav
-  // if(!navOpen){
-  //   skillsObject1.setAttribute("data-aos", "fade-up");
-  //   skillsObject1.setAttribute("data-aos-duration", "1000");
-
-  //   skillsObject2.setAttribute("data-aos", "fade-up");
-  //   skillsObject2.setAttribute("data-aos-duration", "1000");
-  //   skillsObject2.setAttribute("data-aos-delay", "100");
-
-  //   skillsObject3.setAttribute("data-aos", "fade-up");
-  //   skillsObject3.setAttribute("data-aos-duration", "1000");
-  //   skillsObject3.setAttribute("data-aos-delay", "200");
-  // }
 }
 navSlide();
 

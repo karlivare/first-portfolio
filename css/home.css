@@ -51,8 +51,15 @@ nav{
   cursor: pointer;
 }
 @media screen and (max-width: 768px){ /*this changes what the mobile design looks like*/
-  body{
-    overflow-x: hidden; /*prevents horizontal scrolling from setting transform property*/
+  /*prevents horizontal scrolling from setting transform property*/
+  /* body{
+    overflow-x: hidden;
+  } */
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
   }
   .nav-links{
     background: #FFF3E8;
@@ -66,7 +73,6 @@ nav{
     justify-content: start; /*correcting the original space-around justification*/
     padding-top: 125px; /*makes the ul list slightly more centered vertically*/
     gap: 70px;
-
     transform: translateX(100%); /*this moves the nav off the screen*/
     transition: transform 0.5s ease-in; /*the transition for the nav sliding in*/
   }
@@ -90,6 +96,9 @@ nav{
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
+ }
+ .disable-scrolling{
+    overflow-y: hidden;
  }
 
  /*making animation for nav-links to use in home.js*/
