@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const domElement = document.createElement('img')
 
     let galleryItemHTML =
-    `<a href='${element.href}' target='_blank'><div class='gallery-item' data-category='${element.category}'><div class='img-container'><img alt='${element.title}' src='img/${element.url}' class='gallery-image'></div><div class='overlay'><h3>${element.title}</h3></div></div></a>`;
+    `<div class='gallery-item' data-category='${element.category}'><a href='${element.href}' target='_blank'><div class='img-container'><img alt='${element.title}' src='img/${element.url}' class='gallery-image'></div><div class='overlay'><h3>${element.title}</h3></div></a></div>`;
 
     galleryContainer.innerHTML+=galleryItemHTML;
   })
