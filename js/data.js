@@ -29,19 +29,19 @@ const images = [
     id: '1',
     url: 'BFAposter-day.jpg',
     category: 'print',
-    title: 'UConn BFA Exhibition Poster (2021) - Day',
+    title: 'UConn BFA Exhibition Poster - Day (2021)',
   },
   {
     id: '2',
     url: 'BFAposter-morning.jpg',
     category: 'print',
-    title: 'UConn BFA Exhibition Poster (2021) - Morning',
+    title: 'UConn BFA Exhibition Poster - Morning (2021)',
   },
   {
     id: '3',
     url: 'BFAposter-night.jpg',
     category: 'print',
-    title: 'UConn BFA Exhibition Poster (2021) - Night',
+    title: 'UConn BFA Exhibition Poster - Night (2021)',
   },
   {
     id: '4',
