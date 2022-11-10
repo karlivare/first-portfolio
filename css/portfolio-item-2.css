@@ -140,6 +140,9 @@ main{
 /*main*/
 #main-container{
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h2{
   font-family: ofelia-text,sans-serif;
@@ -152,72 +155,20 @@ h2{
 #piece-data{
   max-width: 600px;
 }
-.carousel-container{
-  display: flex;
-  padding: 0;
-  gap: 2rem;
-}
-.carousel{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
+#featured-piece{
   padding: 3rem 0rem 3rem 0rem;
 }
-.carousel-track-container{
-  padding: 0;
-}
-.carousel-track{
-  display: flex;
-  scroll-snap-type: x mandatory;
-  overflow: hidden; /*until I can get intersection observer to work on carousel, this will stay as 'hidden' and not as 'scroll'*/
-  padding: 0;
-  scroll-behavior: smooth;
+#featured-piece img{
   width: 100%;
-  max-width: 450px;
-}
-.carousel-track img{
-  width: 100%;
-  max-width: 450px;
+  max-width: 600px;
   border-radius: 5px;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
-.carousel-button{
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.carousel-nav-container{
-  padding: 0;
-}
-.carousel-nav{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  padding: 0;
-}
-.carousel-indicator{
-  height: 10px;
-  width: 10px;
-  background-color: rgb(28, 24, 20, .3);
-  border-radius: 50%;
-}
-.current-indicator{
-  background-color: rgb(28, 24, 20, 1);
-}
-/* .carousel-button img{
-  height: 60px;
-} */
 @media(min-width: 1200px){
   #piece-data-container{
     display: flex;
     gap: 100px;
     align-items: center;
   }
-}
-#featured-piece{
-  padding: 30px 0px;
 }
 h3{
   border-bottom: 2px solid #473D33;
@@ -259,7 +210,6 @@ p{
 section div{
   padding-bottom: 30px;
 }
-
 
 /*Footer*/
 footer{

@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Karli Vare - Portfolio</title>
+  <title>Karli Vare - Portfolio - Nutmeg LC Talks Spread</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -14,11 +14,10 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/portfolioV2.css">
+  <link rel="stylesheet" href="../css/portfolio-item-2.css">
   <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports ofelia font in regular and medium-->
   <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports venn text-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -29,12 +28,12 @@
 <body>
   <nav>
     <div class="logo">
-      <a href="home.html"><img src="./img/karlivare-logo.svg" alt="Karli Vare logo"></a>
+      <a href="home.html"><img src="../img/karlivare-logo.svg" alt="Karli Vare logo"></a>
     </div>
     <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../portfolioV2.html">Portfolio</a></li>
+      <li><a href="../contact.html">Contact</a></li>
     </ul>
     <div class="burger"> <!--For a collapsing mobile menu-->
       <div class="line1"></div>
@@ -44,34 +43,48 @@
   </nav>
   <main>
     <div id="main-container">
-      <section id="header-container">
-        <header id="portfolio-header">
-          <h2>Portfolio</h2>
-          <div class="dropdown">
-            <h4 id="dropdown-button">Filter</h4>
-            <div id="filter-container">
+      <div id="featured-piece-container">
+        <section id="piece-header">
+          <h2>Nutmeg LC Talks Spread</h2>
+        </section>
+        <div id="piece-data-container">
+          <section id="featured-piece">
+            <img src="../img/nutmeg-lctalks.jpg" alt="Nutmeg LC Talks Spread">
+          </section>
+          <section id="piece-data">
+            <div id="date-container">
+              <h3>Year</h3>
+              <h4 id="date">2021</h4>
             </div>
-          </div>
-        </header>
-      </section>
-      <section id="portfolio">
-        <div id="gallery-container">
-        </div>
-      </section>
+            <div id="material-container">
+              <h3>Created with</h3>
+              <h4 id="date">Adobe Indesign, Illustrator</h4>
+            </div>
+            <div id="info-container">
+              <h3>Additonal Info</h3>
+              <p>Created for Nutmeg Publishing</p>
+            </div>
+          </section>
+      </div>
+      </div>
     </div>
   </main>
   <footer id="footer">
-    <img id="footer-graphic" src="./img/flower-triad.svg" alt="Flower triad graphic">
+    <img id="footer-graphic" src="../img/flower-triad.svg" alt="Blue flower triad graphic">
     <div id="footer-text">
       <h6 id="footer-text-title">Website designed and coded by Karli Vare</h6>
       <small id="copyright">©Karli Vare 2022</small>
     </div>
   </footer>
-  <script src="js/portfolio.js"></script>
-  <script src="js/home.js"></script>
+
+
+
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/home.js"></script>
+  <script src="../js/data.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();

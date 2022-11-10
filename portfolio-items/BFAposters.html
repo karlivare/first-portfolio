@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Karli Vare - Home</title>
+  <title>Karli Vare - Portfolio - UConn BFA Exhibition Posters</title>
   <meta name="description" content="">
   <meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1">
 
@@ -31,9 +31,9 @@
       <a href="home.html"><img src="../img/karlivare-logo.svg" alt="Karli Vare logo"></a>
     </div>
     <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="portfolioV2.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="../home.html">Home</a></li>
+      <li><a href="../portfolioV2.html">Portfolio</a></li>
+      <li><a href="../contact.html">Contact</a></li>
     </ul>
     <div class="burger"> <!--For a collapsing mobile menu-->
       <div class="line1"></div>
@@ -42,26 +42,51 @@
     </div>
   </nav>
   <main>
-    <section id="piece-header">
-      <h2>UConn BFA Exhibition Posters</h2>
-    </section>
-    <section id="featured-piece">
-      <img src="../img/BFAposter-day.jpg" alt="UConn BFA Exhibition Poster - Day">
-    </section>
-    <section id="piece-data">
-      <div id="date-container">
-        <h3>Year</h3>
-        <h4 id="date">2022</h4>
+    <div id="main-container">
+      <section id="piece-header">
+        <h2>UConn BFA Exhibition Posters</h2>
+      </section>
+      <div id="piece-data-container">
+        <section class="carousel">
+          <div class="carousel-container">
+            <!-- <button class="carousel-button" id="slider-left">
+              <img src="../img/slider-left.svg" alt="">
+            </button> -->
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <img id="s1" src="../img/BFAposter-morning.jpg" alt="UConn BFA Exhibition Poster - Morning">
+                <img id="s2" src="../img/BFAposter-day.jpg" alt="UConn BFA Exhibition Poster - Day">
+                <img id="s3" src="../img/BFAposter-night.jpg" alt="UConn BFA Exhibition Poster - Night">
+            </div>
+            </div>
+            <!-- <button class="carousel-button" id="slider-right">
+              <img src="../img/slider-right.svg" alt="">
+            </button> -->
+          </div>
+          <div class="carousel-nav-container">
+            <div class="carousel-nav">
+              <a href="#s1" class="carousel-indicator current-indicator"></a> <!--This will start out as current slide-->
+              <a href="#s2" class="carousel-indicator"></a>
+              <a href="#s3" class="carousel-indicator"></a>
+            </div>
+          </div>
+        </section>
+        <section id="piece-data">
+          <div id="date-container">
+            <h3>Year</h3>
+            <h4 id="date">2020</h4>
+          </div>
+          <div id="material-container">
+            <h3>Created with</h3>
+            <h4 id="date">Adobe Illustrator</h4>
+          </div>
+          <div id="info-container">
+            <h3>Additonal Info</h3>
+            <p>This series of posters was created for the 2020 DMD Senior Thesis Online Exhibition. The 3 phases (morning, day, and night) emphasize the time and effort the seniors put into their projects.</p> <!--, which is also culminated in an animation integrating all 3 posters.-->
+          </div>
+        </section>
       </div>
-      <div id="material-container">
-        <h3>Created with</h3>
-        <h4 id="date">Adobe Illustrator</h4>
-      </div>
-      <div id="info-container">
-        <h3>Additonal Info</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem necessitatibus accusantium iure minus veritatis, vel, accusamus eligendi impedit sit delectus expedita id molestias similique est doloremque nihil excepturi tempore atque.</p>
-      </div>
-    </section>
+    </div>
   </main>
   <footer id="footer">
     <img id="footer-graphic" src="../img/flower-triad.svg" alt="Blue flower triad graphic">
@@ -76,8 +101,10 @@
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/home.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/home.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/carousel.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
