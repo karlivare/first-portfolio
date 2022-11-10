@@ -51,12 +51,14 @@ const images = [
     url: 'oceancollage-no1.jpg',
     category: 'graphic',
     title: 'Ocean Collage No. 1 (2020)',
+    href: './portfolio-items/ocean-collage.html'
   },
   {
     id: '5',
     url: 'oceancollage-no2.jpg',
     category: 'graphic',
     title: 'Ocean Collage No. 2 (2020)',
+    href: './portfolio-items/ocean-collage.html'
   },
   {
     id: '6',
@@ -65,12 +67,12 @@ const images = [
     title: 'Holiday Card (2020)',
     href: './portfolio-items/holidaycard.html'
   },
-  {
-    id: '8',
-    url: 'linesbylis-cover.png',
-    category: 'branding',
-    title: 'Lines by Lis Marketing Campaign (2021)',
-  },
+  // {
+  //   id: '8',
+  //   url: 'linesbylis-cover.png',
+  //   category: 'branding',
+  //   title: 'Lines by Lis Marketing Campaign (2021)',
+  // },
   {
     id: '9',
     url: 'recipegenerator.png',
@@ -97,12 +99,14 @@ const images = [
     url: 'covid-frontpage.png',
     category: 'print',
     title: 'Collection: Nutmeg Covid-19 Timeline (2021)',
+    href: './portfolio-items/nutmeg-covidtimeline.html'
   },
   {
     id: '14',
     url: 'nutmeg-huskython1.png',
     category: 'print',
     title: 'Nutmeg Huskython Spreads (2021)',
+    href: './portfolio-items/nutmeg-huskython.html'
   },
   {
     id: '15',
@@ -123,6 +127,7 @@ const images = [
     url: 'nutmeg-seniorquote1.jpg',
     category: 'print',
     title: 'Nutmeg Senior Quote Spreads (2021)',
+    href: './portfolio-items/nutmeg-seniorquotes.html'
   },
   {
     id: '18',
@@ -135,7 +140,8 @@ const images = [
     id: '19',
     url: 'emailcampaign-mockup.jpg',
     category: 'branding',
-    title: 'Ten Percent Happier Email Campaign (2022)'
+    title: 'Ten Percent Happier Email Campaign (2022)',
+    href: './portfolio-items/tenpercent-emailcampaign.html'
   },
   {
     id: '20',
@@ -145,3 +151,5 @@ const images = [
     href: './portfolio-items/typographicalexploration1.html'
   }
 ];
+
+//add dairy bar? probs not

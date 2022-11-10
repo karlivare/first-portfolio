@@ -137,9 +137,37 @@ main{
   background-color: #FFF3E8;
 }
 
+
 /*main*/
+#scroll-message{
+  font-family: ofelia-text,sans-serif;
+  font-size: 1.25rem;
+  font-weight: 200;
+  margin: 0;
+  /* padding-left: 2rem; */
+  color: rgb(28, 24, 20, .75);
+}
+#piece-data-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #main-container{
   padding: 3rem;
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+}
+#secondary-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media(min-width: 1200px){
+  #main-container{
+    /* padding: 3rem 9rem 3rem 9rem; */
+    padding: 3rem 12% 3rem 12%;
+  }
 }
 h2{
   font-family: ofelia-text,sans-serif;
@@ -157,6 +185,9 @@ h2{
   padding: 0;
   gap: 2rem;
 }
+#slider-right img, #slider-left img{
+  width: 2rem;
+}
 .carousel{
   display: flex;
   flex-direction: column;
@@ -170,18 +201,19 @@ h2{
 .carousel-track{
   display: flex;
   scroll-snap-type: x mandatory;
-  overflow: hidden; /*until I can get intersection observer to work on carousel, this will stay as 'hidden' and not as 'scroll'*/
-  padding: 0;
+  overflow: scroll; /*until I can get intersection observer to work on carousel, the scrollbar will stay in place*/
+  padding-bottom: 1rem;
   scroll-behavior: smooth;
   width: 100%;
-  max-width: 450px;
+  max-width: 800px;
 }
 .carousel-track img{
   width: 100%;
-  max-width: 450px;
+  max-width: 800px;
   border-radius: 5px;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   scroll-snap-stop: always;
+  margin: .5rem;
 }
 .carousel-button{
   background: none;
@@ -211,7 +243,7 @@ h2{
 } */
 @media(min-width: 1200px){
   #piece-data-container{
-    display: flex;
+    flex-direction: row;
     gap: 100px;
     align-items: center;
   }
