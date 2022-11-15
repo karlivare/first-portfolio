@@ -75,7 +75,7 @@ const images = [
   // },
   {
     id: '9',
-    url: 'recipegenerator-small.png',
+    url: 'recipegenerator-small.jpg',
     category: 'web',
     title: 'Random Recipe Generator (2020)',
     href: 'https://github.uconn.edu/pages/kav19006/dmd3475-finalproject/home.html'
@@ -96,7 +96,7 @@ const images = [
   },
   {
     id: '13',
-    url: 'covid-frontpage-small.png',
+    url: 'covid-frontpage-small.jpg',
     category: 'print',
     title: 'Collection: Nutmeg Covid-19 Timeline (2021)',
     href: './portfolio-items/nutmeg-covidtimeline.html'
