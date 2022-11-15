@@ -27,21 +27,21 @@ const categories = [
 const images = [
   {
     id: '1',
-    url: 'BFAposter-day.jpg',
+    url: 'BFAposter-day-small.jpg',
     category: 'print',
     title: 'UConn BFA Exhibition Poster - Day (2021)',
     href: './portfolio-items/BFAposters.html'
   },
   {
     id: '2',
-    url: 'BFAposter-morning.jpg',
+    url: 'BFAposter-morning-small.jpg',
     category: 'print',
     title: 'UConn BFA Exhibition Poster - Morning (2021)',
     href: './portfolio-items/BFAposters.html'
   },
   {
     id: '3',
-    url: 'BFAposter-night.jpg',
+    url: 'BFAposter-night-small.jpg',
     category: 'print',
     title: 'UConn BFA Exhibition Poster - Night (2021)',
     href: './portfolio-items/BFAposters.html'
