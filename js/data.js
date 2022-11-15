@@ -48,21 +48,21 @@ const images = [
   },
   {
     id: '4',
-    url: 'oceancollage-no1.jpg',
+    url: 'oceancollage-no1-small.jpg',
     category: 'graphic',
     title: 'Ocean Collage No. 1 (2020)',
     href: './portfolio-items/ocean-collage.html'
   },
   {
     id: '5',
-    url: 'oceancollage-no2.jpg',
+    url: 'oceancollage-no2-small.jpg',
     category: 'graphic',
     title: 'Ocean Collage No. 2 (2020)',
     href: './portfolio-items/ocean-collage.html'
   },
   {
     id: '6',
-    url: 'holidaycard.jpg',
+    url: 'holidaycard-small.jpg',
     category: 'graphic',
     title: 'Holiday Card (2020)',
     href: './portfolio-items/holidaycard.html'
@@ -75,77 +75,77 @@ const images = [
   // },
   {
     id: '9',
-    url: 'recipegenerator.png',
+    url: 'recipegenerator-small.png',
     category: 'web',
     title: 'Random Recipe Generator (2020)',
     href: 'https://github.uconn.edu/pages/kav19006/dmd3475-finalproject/home.html'
   },
   {
     id: '11',
-    url: 'nutmeg-winter.jpg',
+    url: 'nutmeg-winter-small.jpg',
     category: 'print',
     title: 'Nutmeg Winter Scenery Spread (2021)',
     href: './portfolio-items/nutmeg-winter.html'
   },
   {
     id: '12',
-    url: 'nutmeg-lctalks.jpg',
+    url: 'nutmeg-lctalks-small.jpg',
     category: 'print',
     title: 'Nutmeg LC Talks Spread (2021)',
     href: './portfolio-items/nutmeg-lctalks.html'
   },
   {
     id: '13',
-    url: 'covid-frontpage.png',
+    url: 'covid-frontpage-small.png',
     category: 'print',
     title: 'Collection: Nutmeg Covid-19 Timeline (2021)',
     href: './portfolio-items/nutmeg-covidtimeline.html'
   },
   {
     id: '14',
-    url: 'nutmeg-huskython1.png',
+    url: 'nutmeg-huskython1-small.jpg',
     category: 'print',
     title: 'Nutmeg Huskython Spreads (2021)',
     href: './portfolio-items/nutmeg-huskython.html'
   },
   {
     id: '15',
-    url: 'nutmeg-latenightcarnival.jpg',
+    url: 'nutmeg-latenightcarnival-small.jpg',
     category: 'print',
     title: 'Nutmeg Late Night Carnival Spread (2021)',
     href: './portfolio-items/nutmeg-carnival.html'
   },
   {
     id: '16',
-    url: 'nutmeg-greenhousespread.jpg',
+    url: 'nutmeg-greenhousespread-small.jpg',
     category: 'print',
     title: 'Nutmeg Greenhouse Spread (2021)',
     href: './portfolio-items/nutmeg-greenhouse.html'
   },
   {
     id: '17',
-    url: 'nutmeg-seniorquote1.jpg',
+    url: 'nutmeg-seniorquote1-small.jpg',
     category: 'print',
     title: 'Nutmeg Senior Quote Spreads (2021)',
     href: './portfolio-items/nutmeg-seniorquotes.html'
   },
   {
     id: '18',
-    url: 'nutmeg-tedspread.jpg',
+    url: 'nutmeg-tedspread-small.jpg',
     category: 'print',
     title: 'Nutmeg Experimental Spread (2022)',
     href: './portfolio-items/nutmeg-experimental.html'
   },
   {
     id: '19',
-    url: 'emailcampaign-mockup.jpg',
+    url: 'emailcampaign-mockup-small.jpg',
     category: 'branding',
     title: 'Ten Percent Happier Email Campaign (2022)',
     href: './portfolio-items/tenpercent-emailcampaign.html'
   },
   {
     id: '20',
-    url: 'typographical-exploration-1.jpg',
+    url: 'typographical-exploration-1-small.jpg',
     category: 'graphic',
     title: 'Typographical Exploration No. 1 (2022)',
     href: './portfolio-items/typographicalexploration1.html'
