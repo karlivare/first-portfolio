@@ -67,12 +67,12 @@ const images = [
     title: 'Holiday Card (2020)',
     href: './portfolio-items/holidaycard.html'
   },
-  // {
-  //   id: '8',
-  //   url: 'linesbylis-cover.png',
-  //   category: 'branding',
-  //   title: 'Lines by Lis Marketing Campaign (2021)',
-  // },
+  {
+    id: '8',
+    url: 'linesbylis-small.jpg',
+    category: 'branding',
+    title: 'Lines by Lis Marketing Campaign (2021)',
+  },
   {
     id: '9',
     url: 'recipegenerator-small.jpg',
