@@ -43,12 +43,10 @@ p{
   #piece-data{
     flex-direction: row;
     gap: 3rem;
+    margin: 2rem 0rem;
   }
   #img-data img{
     margin: 0;
-  }
-  #piece-data{
-    margin: 2rem 0rem;
   }
 }
 

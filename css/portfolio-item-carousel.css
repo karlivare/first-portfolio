@@ -1,1 +1,30 @@
 /*add carousel code here*/
+.carousel-cell {
+  width: 80%; /* half-width */
+  margin-right: 10px;
+}
+#piece-data{
+  gap: 2rem;
+}
+.flickity-page-dots .dot {
+  border: 2px solid var(--brown);
+}
+.flickity-page-dots .dot.is-selected {
+  background: var(--brown);
+}
+/*for accessibility*/
+/* .flickity-enabled:focus .flickity-viewport {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+} */
+
+@media(min-width: 700px){
+  #piece-data{
+    display: initial;
+  }
+  .main-carousel{
+    margin: 3rem 0rem;
+  }
+}
+
+
