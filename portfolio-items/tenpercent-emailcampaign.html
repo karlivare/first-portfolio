@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="../css/portfolio-item-carousel.css">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css">
-
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -44,65 +44,50 @@
   </nav>
   <main>
     <div id="main-container">
-      <div id="secondary-container">
-        <section id="piece-header">
+      <section id="featured-piece">
+        <div id="piece-header">
           <h2 class="title">Ten Percent Happier Email Campaign</h2>
-        </section>
-        <div id="piece-data-container">
-          <section class="carousel">
-            <div class="carousel-container">
-              <!-- <button class="carousel-button" id="slider-left">
-                <img src="../img/slider-left.svg" alt="">
-              </button> -->
-              <div class="carousel-track-container">
-                <div class="carousel-track">
-                  <img id="s1" src="../img/email-campaign-presentation.jpg" alt="Ten Percent Happier Email Campaign Title Page">
-                  <img id="s2" src="../img/email-campaign-presentation2.jpg" alt="Ten Percent Happier Email Campaign Analysis">
-                  <img id="s3" src="../img/email-campaign-presentation3.jpg" alt="Ten Percent Happier Email Campaign Inspiration">
-                  <img id="s4" src="../img/email-campaign-presentation4.jpg" alt="Ten Percent Happier Email Campaign Sketches">
-                  <img id="s5" src="../img/email-campaign-presentation5.jpg" alt="Ten Percent Happier Email Campaign Mock Ups">
-                  <img id="s6" src="../img/email-campaign-presentation6.jpg" alt="Ten Percent Happier Email Campaign Typography">
-                  <img id="s7" src="../img/email-campaign-presentation8.jpg" alt="Ten Percent Happier Email Campaign Color">
-              </div>
-              <!--Ended up separating these mockups from the above carousel-track because they weren't playing well with the different img heights-->
-              <div class="mockups">
-                <img id="s8" src="../img/email-campaign-presentation9.jpg" alt="Ten Percent Happier Email Campaign High Fidelity Mock Up 1">
-                <img id="s9" src="../img/email-campaign-presentation10.jpg" alt="Ten Percent Happier Email Campaign High Fidelity Mock Up 2">
-                <img id="s10" src="../img/email-campaign-presentation11.jpg" alt="Ten Percent Happier Email Campaign High Fidelity Mock Up 3">
-                <img id="s11" src="../img/email-campaign-presentation12.jpg" alt="Ten Percent Happier Email Campaign High Fidelity Mock Up 4">
-              </div>
-            
-              </div>
-              <!-- <button class="carousel-button" id="slider-right">
-                <img src="../img/slider-right.svg" alt="">
-              </button> -->
-              
+        </div>
+        <div id="piece-data">
+          <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true }' id="img-data">
+            <div class="carousel-cell">
+              <img src="../img/email-campaign-presentation.jpg" alt="">
             </div>
-            <h6 id="scroll-message">←Scroll to see more →</h6>
-            <!-- <div class="carousel-nav-container">
-              <div class="carousel-nav">
-                <a href="#s1" class="carousel-indicator current-indicator"></a>
-                <a href="#s2" class="carousel-indicator"></a>
-                <a href="#s3" class="carousel-indicator"></a>
-              </div>
-            </div> -->
-          </section>
-          <section id="piece-data">
+            <div class="carousel-cell">
+              <img src="../img/email-campaign-presentation2.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+              <img src="../img/email-campaign-presentation3.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+              <img src="../img/email-campaign-presentation4.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+              <img src="../img/email-campaign-presentation5.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+              <img src="../img/email-campaign-presentation6.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+              <img src="../img/email-campaign-presentation8.jpg" alt="">
+            </div>
+          </div>
+          <div id="text-data">
             <div id="date-container">
               <h3 class="subtitle">Year</h3>
               <h4 class="paragraph" id="date">2022</h4>
             </div>
             <div id="material-container">
               <h3 class="subtitle">Created with</h3>
-              <h4 class="paragraph" id="date">Adobe Illustrator, Photoshop, Indesign</h4>
+              <h4 class="paragraph" id="date">Adobe XD, Illustrator, Indesign</h4>
             </div>
             <div id="info-container">
               <h3 class="subtitle">Additonal Info</h3>
-              <p class="paragraph">Created for DMD 2470 User Interaction Design</p> <!--, which is also culminated in an animation integrating all 3 posters.-->
+              <p class="paragraph">Created for DMD 2470 User Interface Design</p>
             </div>
-          </section>
-      </div>
-      </div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
   <footer id="footer">
@@ -112,20 +97,12 @@
       <small id="copyright">©Karli Vare 2022</small>
     </div>
   </footer>
-
-
-
-
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/home.js"></script>
   <script src="../js/data.js"></script>
-  <script src="../js/carousel.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="../css/portfolio-item-carousel.css">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css">
-
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -43,53 +43,35 @@
   </nav>
   <main>
     <div id="main-container">
-      <div id="secondary-container">
-        <section id="piece-header">
-          <h2 class="title">Ocean Collage Collection</h2>
-        </section>
-        <div id="piece-data-container">
-          <section class="carousel">
-            <div class="carousel-container">
-              <!-- <button class="carousel-button" id="slider-left">
-                <img src="../img/slider-left.svg" alt="">
-              </button> -->
-              <div class="carousel-track-container">
-                <div class="carousel-track">
-                  <img id="s1" src="../img/oceancollage-no1.jpg" alt="Ocean Collage No. 1">
-                  <img id="s2" src="../img/oceancollage-no2.jpg" alt="Ocean Collage No. 2">
-              </div>
-            
-              </div>
-              <!-- <button class="carousel-button" id="slider-right">
-                <img src="../img/slider-right.svg" alt="">
-              </button> -->
-              
+      <section id="featured-piece">
+        <div id="piece-header">
+          <h2 class="title">Ocean Collages</h2>
+        </div>
+        <div id="piece-data">
+          <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true }' id="img-data">
+            <div class="carousel-cell">
+              <img src="../img/oceancollage-no1.jpg" alt="">
             </div>
-            <h6 id="scroll-message">←Scroll to see more →</h6>
-            <!-- <div class="carousel-nav-container">
-              <div class="carousel-nav">
-                <a href="#s1" class="carousel-indicator current-indicator"></a>
-                <a href="#s2" class="carousel-indicator"></a>
-                <a href="#s3" class="carousel-indicator"></a>
-              </div>
-            </div> -->
-          </section>
-          <section id="piece-data">
+            <div class="carousel-cell">
+              <img src="../img/oceancollage-no2.jpg" alt="">
+            </div>
+          </div>
+          <div id="text-data">
             <div id="date-container">
               <h3 class="subtitle">Year</h3>
               <h4 class="paragraph" id="date">2020</h4>
             </div>
             <div id="material-container">
               <h3 class="subtitle">Created with</h3>
-              <h4 class="paragraph" id="date">Adobe Photoshop, Illustrator</h4>
+              <h4 class="paragraph" id="date">Adobe Photoshop</h4>
             </div>
             <div id="info-container">
               <h3 class="subtitle">Additonal Info</h3>
-              <p class="paragraph">Created for DMD 1101 Design Lab, this series of posters explores the environmental impact of humans on the ocean. </p> <!--, which is also culminated in an animation integrating all 3 posters.-->
+              <p class="paragraph">Created for DMD 1101 Design Lab I.</p>
             </div>
-          </section>
-      </div>
-      </div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
   <footer id="footer">
@@ -99,20 +81,12 @@
       <small id="copyright">©Karli Vare 2022</small>
     </div>
   </footer>
-
-
-
-
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/home.js"></script>
   <script src="../js/data.js"></script>
-  <script src="../js/carousel.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
