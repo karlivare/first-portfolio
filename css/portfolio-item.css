@@ -1,155 +1,42 @@
 /*main*/
-#scroll-message{
-  font-family: ofelia-text,sans-serif;
-  font-size: 1.25rem;
-  font-weight: 200;
-  margin: 0;
-  /* padding-left: 2rem; */
-  color: rgb(28, 24, 20, .75);
-}
-#piece-data-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#piece-data{
-  align-self: flex-start;
-  padding-top: 3rem;
+main{
+  background-color: var(--beige);
 }
 #main-container{
   padding: 3rem;
   display: flex;
-  flex-direction: column;    
-  align-items: center;
-}
-#secondary-container{
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
-@media(min-width: 1200px){
-  #main-container{
-    /* padding: 3rem 9rem 3rem 9rem; */
-    padding: 3rem 12% 3rem 12%;
-  }
-}
-h2{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 2.67rem;
-  color: #473D33;
-  margin: 0;
+  align-items: center;
 }
 #piece-data{
   max-width: 600px;
+  align-self: flex-start;
+  padding-top: 3rem;
 }
-.carousel-container{
-  display: flex;
-  padding: 0;
-  gap: 2rem;
-}
-#slider-right img, #slider-left img{
-  width: 2rem;
-}
-.carousel{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
+#featured-piece{
   padding: 3rem 0rem 3rem 0rem;
 }
-.carousel-track-container{
-  padding: 0;
-}
-.carousel-track{
-  display: flex;
-  scroll-snap-type: x mandatory;
-  overflow: scroll; /*until I can get intersection observer to work on carousel, the scrollbar will stay in place*/
-  padding-bottom: 1rem;
-  scroll-behavior: smooth;
-  max-width: 800px;
-}
-.carousel-track img{
+#featured-piece img{
   width: 100%;
-  max-width: 800px;
-  max-height: 800px;
+  max-width: 600px;
   border-radius: 5px;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-  margin: .5rem;
 }
-.carousel-button{
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.carousel-nav-container{
-  padding: 0;
-}
-.carousel-nav{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  padding: 0;
-}
-.carousel-indicator{
-  height: 10px;
-  width: 10px;
-  background-color: rgb(28, 24, 20, .3);
-  border-radius: 50%;
-}
-.current-indicator{
-  background-color: rgb(28, 24, 20, 1);
-}
-/* .carousel-button img{
-  height: 60px;
-} */
 @media(min-width: 1200px){
   #piece-data-container{
-    flex-direction: row;
+    display: flex;
     gap: 100px;
     align-items: center;
   }
 }
-#featured-piece{
-  padding: 30px 0px;
-}
 h3{
-  border-bottom: 2px solid #473D33;
-  font-family: ofelia-text,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.67rem;
-  color: #473D33;
-  margin: 0;
+  border-bottom: 2px solid var(--brown);
   text-transform: uppercase;
   padding-bottom: 5px;
 }
 h4{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.67rem;
-  color: #473D33;
-  margin: 0;
   padding-top: 5px;
 }
-#date-container h3:nth-child(2), #material-container h3:nth-child(2){
-  font-family: ofelia-text,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.67rem;
-  color: #473D33;
-  margin: 0;
-}
 p{
-  font-family: venn, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
-  color: #473D33;
-  margin: 0;
   padding-top: 5px;
 }
 section div{
