@@ -7,7 +7,7 @@ main{
   justify-content: center;
 }
 #featured-piece{
-  padding: 6rem;
+  padding: 2rem;
 }
 #piece-data{
   display: flex;
@@ -47,6 +47,9 @@ p{
   }
   #img-data img{
     margin: 0;
+  }
+  #featured-piece{
+    padding: 6rem;
   }
 }
 
