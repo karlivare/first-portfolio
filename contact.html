@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports ofelia font in regular and medium-->
-  <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css"> <!--Imports venn text-->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/eva3xxq.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -45,26 +44,26 @@
   <main>
     <div id="main-container">
       <section id="form-section">
-        <h2>Contact Me</h2>
+        <h2 class="title">Contact Me</h2>
         <div id="form-container">
           <form action="https://formsubmit.co/kmvare@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="Karli Vare Portfolio - New Message">
             <input type="hidden" name="_next" value="https://github.uconn.edu/pages/kav19006/karlivare-website/thankyou.html">
             <div id="name-email-container">
               <fieldset>
-                <label for="name">Name</label>
-                <input name="name" id="name" type="text" required>
+                <label class="subtitle" for="name">Name</label>
+                <input class="paragraph" name="name" id="name" type="text" required>
               </fieldset>
               <fieldset>
-                <label for="email">Email</label>
-                <input name="email" type="email" id="email" required>
+                <label class="subtitle" for="email">Email</label>
+                <input class="paragraph" name="email" type="email" id="email" required>
               </fieldset>
             </div>
             <fieldset>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" maxlength="500" required></textarea>
+              <label class="subtitle" for="message">Message</label>
+              <textarea class="paragraph" id="message" name="message" maxlength="500" required></textarea>
             </fieldset>
-            <button type="submit" id="submit">Submit</button>
+            <button class="paragraph" type="submit" id="submit">Submit</button>
           </form>
         </div>
       </section>
