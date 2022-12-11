@@ -1,133 +1,3 @@
-*{
-  box-sizing: border-box;
-  /*1rem is equal to 12px*/
-}
-
-/*Nav*/
-.logo{
-  width: 100px; /*can change logo size later*/
-  cursor: pointer;
-  padding: 10px; /*prevents weird gap between nav and nav links in mobile version*/
-}
-nav{
-  display: flex;
-  justify-content: space-around;
-  gap: 250px; /*space between logo and burger*/
-  padding: 20px 0px;
-  align-items: center;
-  min-height: 8vh;
-  background-color: #FFF3E8;
-  font-family: ofelia-text,sans-serif;
-}
-.nav-links{
-  display: flex;
-  /*justify-content used with width changes the spacing of the nav items. can change later*/
-  justify-content: space-around;
-  width: 35%;
-  padding-left: 0;
-  z-index: 1; /*ensures that the nav is top layer among other layers*/
-}
-.nav-links a:hover{
-  font-weight: 500;
-}
-.nav-links li{ /*to remove the bullet points from the list*/
-  list-style: none;
-}
-.nav-links a{
-  color: #473D33;
-  text-decoration: none;
-}
-
-/*responsive nav*/
-.burger div{
-  width: 55px;
-  height: 2px;
-  background-color: #473D33;
-  margin: 10px;
-  transition: all .20s ease; /*this is where the transition goes instead of in .toggle*/
-}
-.burger{
-  display: none;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px){ /*this changes what the mobile design looks like*/
-  html, body {
-    overflow-x: hidden;
-  }
-  body {
-    position: relative
-  }
-  .nav-links{
-    background: #FFF3E8;
-    position: absolute; /*maybe try other positioning?*/
-    height: 100vh;
-    top: 10vh; /*gap between top of nav and menu*/
-    width: 100%; /*changes how much space the nav takes up on the screen*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start; /*correcting the original space-around justification*/
-    padding-top: 125px; /*makes the ul list slightly more centered vertically*/
-    gap: 70px;
-    transform: translateX(100%); /*this moves the nav off the screen*/
-    transition: transform 0.5s ease-in; /*the transition for the nav sliding in*/
-  }
-  .nav-links a{
-    text-transform: uppercase;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 3rem;
-  }
-  .nav-links li{
-    opacity: 0; /*must leave this here so you can't see the links before they animate*/
-  }
-  .burger{
-    display: block; /*adds the burger menu in for mobile screen sizes*/
-  }
-  .nav-active{ /*this class must be inside the media query. made mistake of taking it out*/
-    transform: translateX(0%); /*When the nav is active, it no longer lives to the side of the viewport*/
-    height: 120vh; /*need to change this number once other sections are finalized*/
-  }
-  .hide{ /*hiding content while still leaving screen reader accessible. got from css-tricks.com*/
-    position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important;
- }
- .body-position{
-   position: initial;
- }
-
- /*making animation for nav-links to use in home.js*/
-@keyframes navLinkFadeIn{
-  from{
-    opacity: 0; /*nav items will fade in from 0% opacity to 100% opacity*/
-    transform: translateX(50px); /*nav items will also move down slightly*/
-    /*these two properties create a fade down effect*/
-  }
-  to{
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-}
-
-/*making animations stop when page is resized*/
-.resize-animation-stopper * {
-  animation: none !important;
-  transition: none !important;
-}
-
-/*making the burger menu toggle to an X*/
-.toggle .line1{
-  transform: rotate(-45deg) translate(-1px, 17px); /*might have to come back to this translate number*/
-}
-.toggle .line2{
-  opacity: 0;
-}
-.toggle .line3{
-  transform: rotate(45deg) translate(1px, -17px);
-}
-
 /*intro section*/
 #intro{
   background-color: #FFF3E8;
@@ -144,29 +14,17 @@ nav{
   justify-content: center;
   align-items: center;
 }
-
-.intro-text h2{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 2.67rem;
-  color: #473D33;
-  margin-bottom: 0;
+div.intro-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.intro-text p{ /*uses venn typeface*/
-  margin-bottom: 0;
-  font-family: venn, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
-  color: #473D33;
+.intro-text p{
   max-width: 600px;
-  
 }
 /*intro tablet media query*/
 @media(min-width: 950px){
   #intro{
-    /*didn't need grid here like I thought I would*/
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -176,74 +34,56 @@ nav{
 
 
 /*Skills section*/
-#skills{
+#skills-section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #6FA7B3;
+  background-color: var(--blue);
   padding: 3rem;
 }
+#skills-objects-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
 #skills-title{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 2.33rem;
   color: white;
   text-align: center;
-  margin-top: 0;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
 }
 .skills-object{
-  text-align: center;
-  font-family: ofelia-text,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: white;
-  font-size: 1.67rem;
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 .skills-object h4{
-  margin-top: 5px;
-}
-.skills-object:nth-child(3) h4{
-  margin-bottom: 0;
-}
-.skills-object img{
-  width: 80px;
+  text-align: center;
+  color: white;
+  width: 200px;
+  margin: 0;
 }
 
 /*Skills section tablet media query*/
 @media(min-width: 768px){
   #skills-objects-container{ /*makes objects go into row*/
-    display: flex;
+    flex-direction: row;
   }
 }
 
 /*Projects text section*/
-#projects-text{
-  background-color: #FFF3E8;
-  color: #473D33;
+#projects-text-section{
+  background-color: var(--beige);
   text-align: center;
-  padding: 2rem;
-}
-#projects-text h5{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.5rem;
-  margin: 0;
-}
-#projects-text h6{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.25rem;
-  margin: 0;
+  padding: 3rem;
 }
 #projects-link, #projects-link:visited{
-  color:#473D33;
+  color: var(--brown);
 }
 #projects-link:hover{
-  color:#6FA7B3;
+  color: var(--blue);
 }
 
 /*Projects preview*/
@@ -261,7 +101,6 @@ nav{
   width: 100%; /*images fill all of container*/
 }
 .preview-title{
-  color: white; /*might need for animation*/
   position: absolute; /*must set this position to center the text on top*/
   top: 0;
   left: 0;
@@ -273,20 +112,14 @@ nav{
   align-items: center;
 }
 .preview-title h5{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 2.33rem;
+  color: white;
   text-align: center;
   margin-bottom: 10px; /*separates title from the year*/
   margin-top: 10px;
   width: 350px;
 }
 .preview-title h6{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
+  color: white;
   text-align: center;
   margin: 0;
 }
@@ -381,42 +214,5 @@ nav{
 }
 .preview-item:hover .preview-img{ /*putting .preview-img after the hover makes it so you can hover over one without applying the opacity to all*/
   opacity: 30%; /*changes how strong the black overlay is*/
-}
-
-/*Footer*/
-footer{
-  background-color: #FFF3E8;
-  padding: 3rem;
-
-  /*to center*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#footer-graphic{
-  max-width: 100px;
-}
-#footer-text{
-  text-align: center;
-  color: #473D33;
-}
-#footer-text-title{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.25rem;
-  margin: 10px;
-}
-#copyright{
-  font-family: ofelia-text,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.8rem;
-}
-
-/*accessiblity? work in progress. mobile is sucking*/
-:focus{
-  outline: 2px solid black;
 }
 

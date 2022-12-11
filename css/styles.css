@@ -1,0 +1,225 @@
+/*
+Title
+Ofelia Text, 32, Bold
+
+Subtitle
+Ofelia Text, 24, Medium
+
+Paragraph
+Ofelia Display, 16, Regular
+*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --blue: #487C89;
+  --brown: #473D33; 
+  --beige: #FFF3E8;
+  --light-blue: #D1F7FF;
+}
+
+.title{
+  font-family: ofelia-text, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.7rem;
+  color: var(--brown);
+}
+
+.subtitle{
+  font-family: ofelia-text, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2rem;
+  color: var(--brown);
+}
+
+.paragraph{
+  font-family: ofelia-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: var(--brown);
+}
+
+.nav-links-mobile{
+  font-family: ofelia-text, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.nav-links-desktop{
+  font-family: ofelia-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: var(--brown);
+}
+
+/*Nav*/
+.logo{
+  width: 100px; /*can change logo size later*/
+  cursor: pointer;
+  padding: 10px; /*prevents weird gap between nav and nav links in mobile version*/
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  gap: 250px; /*space between logo and burger*/
+  padding: 20px 0px;
+  align-items: center;
+  min-height: 8vh;
+  background-color: var(--beige);
+}
+.nav-links{
+  display: flex;
+  /*justify-content used with width changes the spacing of the nav items. can change later*/
+  justify-content: space-around;
+  width: 35%;
+  padding-left: 0;
+  z-index: 1; /*ensures that the nav is top layer among other layers*/
+  font-family: ofelia-display, sans-serif;
+}
+.nav-links li{ /*to remove the bullet points from the list*/
+  list-style: none;
+}
+.nav-links a{
+  color: var(--brown);
+  text-decoration: none;
+}
+.nav-links a:hover{
+  font-weight: 500;
+}
+
+/*responsive nav*/
+.burger div{
+  width: 55px;
+  height: 2px;
+  background-color: var(--brown);
+  margin: 10px;
+  transition: all .20s ease; /*this is where the transition goes instead of in .toggle*/
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px){ /*this changes what the mobile design looks like*/
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+  .nav-links{
+    background: var(--beige);
+    position: absolute; /*maybe try other positioning?*/
+    height: 100vh;
+    top: 10vh; /*gap between top of nav and menu*/
+    width: 100%; /*changes how much space the nav takes up on the screen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; /*correcting the original space-around justification*/
+    padding-top: 125px; /*makes the ul list slightly more centered vertically*/
+    gap: 70px;
+    transform: translateX(100%); /*this moves the nav off the screen*/
+    transition: transform 0.5s ease-in; /*the transition for the nav sliding in*/
+  }
+  .nav-links a{
+    text-transform: uppercase;
+    font-family: ofelia-text, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+  }
+  .nav-links li{
+    opacity: 0; /*must leave this here so you can't see the links before they animate*/
+  }
+  .burger{
+    display: block; /*adds the burger menu in for mobile screen sizes*/
+  }
+  .nav-active{ /*this class must be inside the media query. made mistake of taking it out*/
+    transform: translateX(0%); /*When the nav is active, it no longer lives to the side of the viewport*/
+    height: 120vh; /*need to change this number once other sections are finalized*/
+  }
+  .hide{ /*hiding content while still leaving screen reader accessible. got from css-tricks.com*/
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+ }
+ .body-position{
+   position: initial;
+ }
+
+ /*making animation for nav-links to use in home.js*/
+@keyframes navLinkFadeIn{
+  from{
+    opacity: 0; /*nav items will fade in from 0% opacity to 100% opacity*/
+    transform: translateX(50px); /*nav items will also move down slightly*/
+    /*these two properties create a fade down effect*/
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+}
+
+/*making animations stop when page is resized*/
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/*making the burger menu toggle to an X*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-1px, 17px); /*might have to come back to this translate number*/
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(1px, -17px);
+}
+
+
+/*Footer*/
+footer{
+  background-color: var(--beige);
+  padding: 3rem;
+
+  /*to center*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footer-graphic{
+  max-width: 100px;
+}
+#footer-text{
+  text-align: center;
+  color: var(--brown);
+}
+#footer-text-title{
+  font-family: ofelia-text, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+#copyright{
+  font-family: ofelia-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--brown);
+}
+
+/*accessiblity? work in progress. mobile is sucking*/
+:focus{
+  outline: 2px solid black;
+}
