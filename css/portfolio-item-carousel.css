@@ -19,6 +19,7 @@ main{
 }
 div.carousel-cell img{
   width: 100%;
+  max-width: 600px;
   border-radius: 5px;
 }
 h3{
@@ -41,7 +42,7 @@ p{
   margin-bottom: 3rem;
 }
 .carousel-cell {
-  max-width: 500px;
+  width: 90%;
   margin-right: 10px;
 }
 .flickity-page-dots .dot {
