@@ -18,9 +18,9 @@ main{
   margin-top: 2rem;
 }
 div.carousel-cell img{
-  width: 100%;
-  max-width: 600px;
   border-radius: 5px;
+  max-width: 100%;
+  height: auto;
 }
 h3{
   border-bottom: 2px solid var(--brown);
@@ -42,8 +42,12 @@ p{
   margin-bottom: 3rem;
 }
 .carousel-cell {
-  width: 90%;
-  margin-right: 10px;
+  margin-bottom: 1rem; /*this gives the slider indiator some room*/
+  margin-right: 1rem;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-right: 1rem;
 }
 .flickity-page-dots .dot {
   border: 2px solid var(--brown);
