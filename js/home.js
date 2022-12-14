@@ -22,29 +22,28 @@ const navSlide = () =>{ /*creating anonymous function*/
   //boolean and variable to help with hidding and making other homepage sections reappear in correlation with nav sliding in and out
   let timeDelay;
   let navOpen = false;
-
-  //for text animations on the rest of the home page
-  let skillsObject1 = document.querySelector('.skills-object:nth-child(1)');
-  let skillsObject2 = document.querySelector('.skills-object:nth-child(2)');
-  let skillsObject3 = document.querySelector('.skills-object:nth-child(3)');
   
   burger.addEventListener('click', ()=>{ //when burger menu is clicked, run this function
     //toggle nav
     nav.classList.toggle('nav-active'); //add or remove the class nav-active to the nav. this will translate the nav to 0%, making it come into the viewport
     
     //animate links
-    navLinks.forEach((link, index) => { //for each link in navLinks. index is important for the delay aspect of animation
+    navLinks.forEach((link, index) => {
         link.style.animation = link.style.animation = `navLinkFadeIn 0.5s ease forwards ${index/4 + 0.25}s`;
     });
 
     //burger animation
     burger.classList.toggle('toggle'); //animates the burger menu lines
 
-    //when navigation is open, hide the other elements and fix the horizontal scrolling
-    //implementing setTimeout makes the sliding transition appear smoother
+    //when navigation is open, hide the other elements and fix the horizontal/verical scrolling
     let body = document.querySelector('body');
     let main = document.querySelector('main');
-    
+    let html = document.querySelector('html');
+
+    //stop horizontal scrolling when nav is open
+    html.style.overflowY = 'hidden';
+
+    //implementing setTimeout makes the sliding transition appear smoother
     if(navOpen){
       timeDelay = 0;
     } else{
