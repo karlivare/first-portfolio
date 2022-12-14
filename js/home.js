@@ -1,14 +1,7 @@
-//stops animation while resizing screen
-// let resizeTimer;
-// window.addEventListener("resize", () => {
-//   document.body.classList.add("resize-animation-stopper");
-//   clearTimeout(resizeTimer);
-//   resizeTimer = setTimeout(() => {
-//     document.body.classList.remove("resize-animation-stopper");
-//   }, 400);
-// });
-
 const navSlide = () =>{ /*creating anonymous function*/
+  let body = document.querySelector('body');
+  let main = document.querySelector('main');
+  let html = document.querySelector('html');
   
   let burger = document.querySelector('.burger'); /*get a reference to the burger menu*/
   let nav = document.querySelector('.nav-links'); /*get a reference to the entire ul*/
@@ -27,6 +20,9 @@ const navSlide = () =>{ /*creating anonymous function*/
     //toggle nav
     nav.classList.toggle('nav-active'); //add or remove the class nav-active to the nav. this will translate the nav to 0%, making it come into the viewport
     
+    //stop horizontal scrolling when nav is open
+    html.style.overflowY = 'hidden';
+
     //animate links
     navLinks.forEach((link, index) => {
         link.style.animation = link.style.animation = `navLinkFadeIn 0.5s ease forwards ${index/4 + 0.25}s`;
@@ -34,14 +30,6 @@ const navSlide = () =>{ /*creating anonymous function*/
 
     //burger animation
     burger.classList.toggle('toggle'); //animates the burger menu lines
-
-    //when navigation is open, hide the other elements and fix the horizontal/verical scrolling
-    let body = document.querySelector('body');
-    let main = document.querySelector('main');
-    let html = document.querySelector('html');
-
-    //stop horizontal scrolling when nav is open
-    html.style.overflowY = 'hidden';
 
     //implementing setTimeout makes the sliding transition appear smoother
     if(navOpen){
