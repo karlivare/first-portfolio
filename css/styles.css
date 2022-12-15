@@ -129,6 +129,7 @@ nav{
     position: absolute; /*maybe try other positioning?*/
     height: 100vh;
     top: 8rem; /*gap between top of nav and menu*/
+    left: 0;
     width: 100%; /*changes how much space the nav takes up on the screen*/
     display: flex;
     flex-direction: column;
