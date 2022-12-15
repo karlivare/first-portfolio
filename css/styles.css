@@ -63,18 +63,28 @@ Ofelia Display, 16, Regular
 
 /*Nav*/
 .logo{
-  width: 100px; /*can change logo size later*/
+  width: 80px;
   cursor: pointer;
-  padding: 10px; /*prevents weird gap between nav and nav links in mobile version*/
+  margin: 10px;
+}
+@media(max-width: 400px){
+  .logo{
+    width: 60px;
+  }
 }
 nav{
   display: flex;
-  justify-content: space-around;
-  gap: 250px; /*space between logo and burger*/
-  padding: 20px 0px;
+  justify-content: space-between;
+  /* gap: 250px; */
+  padding: 1rem;
   align-items: center;
   min-height: 8vh;
   background-color: var(--beige);
+}
+@media(min-width: 992px){
+  nav{
+    padding: 1rem 6rem;
+  }
 }
 .nav-links{
   display: flex;
