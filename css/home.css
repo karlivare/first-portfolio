@@ -44,7 +44,7 @@ div.intro-text{
 #skills-objects-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 #skills-title{
