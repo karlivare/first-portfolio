@@ -37,15 +37,19 @@ p{
 }
 
 /*add carousel code here*/
+.carousel-cell img{
+  width: 100%
+}
+
+div.carousel-cell{
+  max-width: 700px;
+}
 .main-carousel{
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
 .carousel-cell {
   margin-bottom: 1rem;
-  /* width: 100%; */
-  /* max-width: 600px; */
-  /* height: auto; */
   margin-right: 1rem;
 }
 .flickity-page-dots .dot {
