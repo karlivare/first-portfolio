@@ -21,7 +21,7 @@ const navSlide = () =>{ /*creating anonymous function*/
     nav.classList.toggle('nav-active'); //add or remove the class nav-active to the nav. this will translate the nav to 0%, making it come into the viewport
     
     //stop horizontal scrolling when nav is open
-    html.style.overflowY = 'hidden';
+    // html.style.overflowY = 'hidden';
 
     //animate links
     navLinks.forEach((link, index) => {
