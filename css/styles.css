@@ -67,6 +67,34 @@ Ofelia Display, 16, Regular
   cursor: pointer;
   margin: 1rem;
 }
+/*Logo svg animation*/
+#logo-svg{
+  transform: scale(1);
+  transition: transform 0.25s ease-in-out;
+  overflow: visible; /*setting overflow to visible prevents svg from being cut off during rotation animation*/
+}
+#logo-svg:hover{
+  transform: scale(1.25);
+  transition: transform 0.25s ease-in-out;
+}
+g#kv{
+  opacity: 100%;
+  transition: opacity 0.25s ease-in-out;
+}
+/*on logo hover state, do these things to the flowers*/
+#logo-svg:hover > g#big-flower{
+  transform-origin: 45% 55%;
+  transform: rotate(360deg);
+  transition: transform 0.75s ease-in-out;
+}
+#logo-svg:hover > g#small-flower{
+  transform-origin: 85% 15%;
+  transform: rotate(-360deg);
+  transition: transform 0.75s ease-in-out;
+}
+#logo-svg:hover > g#kv{
+  opacity: 0%;
+}
 @media(max-width: 400px){
   .logo{
     width: 60px;
