@@ -124,14 +124,43 @@ nav{
 }
 .nav-links li{ /*to remove the bullet points from the list*/
   list-style: none;
+  transition: transform 0.3s ease-in-out; 
 }
+.nav-links li:hover{
+  /* transform: translateX(5px); */
+  transform: translateY(5px);
+}
+/*animating the nav links with an underline*/
 .nav-links a{
+  position: relative; /*we will position border element relative to this*/
   color: var(--brown);
   text-decoration: none;
 }
-.nav-links a:hover{
-  font-weight: 500;
+.nav-links a::after{ /*making an underline pseudo-element of the navlink*/
+  content: ""; /*this needs to be blank bc there is only decorative content*/
+  position: absolute; /*positioned relative to the nearest positioned ancestor*/
+  width: 100%;
+  opacity: 0.5;
+  height: 8px;
+  bottom: 0;
+  left: 0px;
+  top: 4rem;
+  background-color: var(--brown);
+  transform: scaleX(0); /*this is what really creates the animation effect*/
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top left; /*this is what makes it go from left to right*/
 }
+.nav-links a:hover::after{ /*when you hover on the underline pseudo-element...*/
+  transform: scaleX(1);
+}
+@media(min-width: 768px){
+  .nav-links a::after{ 
+    height: 5px;
+    top: 1.5rem;
+  }
+}
+
+
 
 /*responsive nav*/
 .burger div{
