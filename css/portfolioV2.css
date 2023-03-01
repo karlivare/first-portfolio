@@ -164,6 +164,15 @@ main{
     opacity: 0;
   }
   /*preview item animation on hover*/
+  /*the styling of these first two elements are necessary to have the transition animate on the off hover*/
+  .gallery-item .overlay{
+    opacity: 0;
+    transition: .5s ease;
+  }
+  .gallery-item .gallery-image{
+    opacity: 100%;
+    transition: .5s ease;
+  }
   .gallery-item:hover .overlay{
     opacity: 1;
     transition: .5s ease;
@@ -172,6 +181,25 @@ main{
     opacity: 20%;
     transition: .5s ease;
   }
+
+  /*adding gallery item hover effect with drop shadow*/
+  .gallery-item{
+    box-shadow: none;
+    transition: .5s ease;
+  }
+  .gallery-item:hover{
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .5);
+  }
+  /*adding gallery item hover effect with slight movement up*/
+  .gallery-item{
+    position: relative; /*adding this so I can animate it slightly upwards on the hover*/
+    bottom: 0;
+    transition: .5s ease;
+  }
+  .gallery-item:hover{
+    bottom: 3px;
+  }
+
 }
 /*Another portfolio media query*/
 @media(min-width: 1100px){
