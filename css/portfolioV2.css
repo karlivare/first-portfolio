@@ -44,7 +44,7 @@ main{
   cursor: pointer;
 }
 .filter-element:hover{
-  font-weight: 700;
+  font-weight: 600;
 }
 .filter-active{ /*gives the user feedback about the filter they selected*/
   font-weight: 700;
@@ -202,8 +202,8 @@ main{
 
 }
 /*Another portfolio media query*/
-@media(min-width: 1100px){
+@media(min-width: 1000px){ /*used to be 1100*/
   .overlay h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
