@@ -20,7 +20,9 @@ Ofelia Display, 16, Regular
   --light-blue: #D1F7FF;
   --blue-hover: #38616B;
 }
-
+html{
+  background-color: var(--beige); /*trying to get background color to bleed on mobile devices*/
+}
 .title{
   font-family: ofelia-text, sans-serif;
   font-weight: 700;
